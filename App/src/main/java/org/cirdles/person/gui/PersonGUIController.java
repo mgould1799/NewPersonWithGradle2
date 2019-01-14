@@ -8,6 +8,9 @@ package org.cirdles.person.gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -16,12 +19,30 @@ import javafx.fxml.Initializable;
  */
 public class PersonGUIController implements Initializable {
 
+    @FXML
+    private TextField nameBox;
+
+    @FXML
+    private TextField dateOfBirthBox;
+
+    @FXML
+    private Button save;
+
+    @FXML
+    private Button open;
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    } 
+    
+  
+    
+
+
     
 }
