@@ -9,11 +9,14 @@
 // Note however, that you may define your own "run" and "debug" task if you
 // prefer. In this case NetBeans will not add these tasks but you may rely on
 // your own implementation.
+apply plugin: "application"
 if (!hasProperty('mainClass')) {
-    ext.mainClass = ''
+    ext.mainClass = 'org.cirdles.person.gui.RunCore'
 }
 
 dependencies {
+    
+    compile project(":Core")
     // TODO: Add dependencies here
     //   but note that JUnit should have already been added in parent.gradle.
     //   By default, only the Maven Central Repository is specified in
