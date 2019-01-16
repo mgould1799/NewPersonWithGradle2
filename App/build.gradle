@@ -13,6 +13,7 @@ apply plugin: "application"
 if (!hasProperty('mainClass')) {
     ext.mainClass = 'org.cirdles.person.gui.RunCore'
 }
+mainClassName = 'org.cirdles.person.gui.RunCore'
 
 dependencies {
     

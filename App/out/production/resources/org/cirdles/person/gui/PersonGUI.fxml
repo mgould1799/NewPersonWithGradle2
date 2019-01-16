@@ -32,8 +32,8 @@
       <Text layoutX="108.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or choose a file to deserialize a person's name and DOB to below" />
       <ButtonBar layoutX="386.0" layoutY="328.0" prefHeight="40.0" prefWidth="200.0">
         <buttons>
-          <Button fx:id="save" mnemonicParsing="false" onAction="#serializeToActionserializeToAction" prefHeight="27.0" prefWidth="94.0" text="Save " />
-            <Button fx:id="open" mnemonicParsing="false" onAction="#setDeserializeFromActionsetDeserializeFromAction" prefHeight="27.0" text="Open" />
+          <Button fx:id="save" mnemonicParsing="false" onAction="#serializeToAction" prefHeight="27.0" prefWidth="94.0" text="Save " />
+            <Button fx:id="open" mnemonicParsing="false" onAction="#setDeserializeFromAction" prefHeight="27.0" text="Open" />
         </buttons>
       </ButtonBar>
    </children>

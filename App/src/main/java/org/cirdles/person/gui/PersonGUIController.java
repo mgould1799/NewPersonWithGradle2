@@ -59,7 +59,6 @@ public class PersonGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     } 
-    
     @FXML
     public void serializeToAction(ActionEvent event){
         FileChooser fc = new FileChooser();
@@ -74,6 +73,10 @@ public class PersonGUIController implements Initializable {
         }
     }
     @FXML
+    /**
+     *
+     * @param event
+     */
     public void setDeserializeFromAction(ActionEvent event){
         FileChooser fc = new FileChooser();
         File selectedFile = fc.showOpenDialog(null);
@@ -87,6 +90,8 @@ public class PersonGUIController implements Initializable {
             System.out.println("file not valid ");
         }
     }
+
+  
     
     
   
