@@ -14,6 +14,19 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 
 
@@ -226,5 +239,100 @@ public class Person implements Serializable{
         Person decodedP = (Person) decoder.readObject();
         decoder.close();
         return decodedP;
+    }
+
+
+    public static void serializationXStream(Person person, String file) {
+
+        OutputStreamWriter outfile = null;
+
+        try {
+            XStream xstream = new XStream(new DomDriver());
+            String xml = xstream.toXML(person).trim();
+            outfile = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+            try (PrintWriter out = new PrintWriter(outfile)) {
+                out.println(xml);
+                out.flush();
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            if (outfile != null) {
+                try {
+                    outfile.close();
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+
+        }
+
+    }
+
+    /*@Override
+    public boolean canCovert(Class clazz){
+        return clazz.equals(Person.class);
+    }*/
+
+    @Override
+    public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
+        Person person = (Person) value;
+        writer.startNode("name");
+        writer.setValue(person.getName());
+        writer.endNode();
+
+        writer.startNode("DOB");
+        writer.setValue(Long.toString(person.getDOB()));
+        writer.endNode();
+
+
+    }
+
+    @Override
+    public Person unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+        Person person = new Person();
+
+        reader.moveDown();
+        person.setName(reader.getValue());
+        reader.moveUp();
+
+        reader.moveDown();
+        person.setDOB(Long.parseLong(reader.getValue()));
+        reader.moveUp();
+
+        reader.moveDown();
+
+        return person;
+
+
+    }
+
+    //https://howtodoinjava.com/java/serialization/xmlencoder-and-xmldecoder-example/
+    public static Person deserializationXStream(String file) {
+
+        Object obj = null;
+        String xmlContents = null;
+        try {
+            xmlContents = new String(Files.readAllBytes(Paths.get(file)));
+            XStream xstream = new XStream(new DomDriver());
+            obj = xstream.fromXML(xmlContents);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        Person person = (Person) obj;
+
+        return person;
+    }
+
+    public String prettyString() {
+
+        return "The person's name is " + name + ", and their DOB is " + DOB + ".";
+    }
+
+
+    @Override
+    public boolean canConvert(Class aClass) {
+        return aClass.equals(Person.class);
     }
 }
