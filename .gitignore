@@ -1,2 +1,41 @@
 /App/build/
 /Core/build/
+
+
+
+# Gradle
+.gradle/
+build/
+
+
+# Netbeans
+nb-configuration.xml
+nbactions.xml
+dependency-reduced-pom.xml
+nbproject/
+.nb-gradle/
+.nb-gradle-properties
+private/
+
+
+# IntelliJ
+.idea/
+*.iml
+
+# Generated
+*.txt
+*.html
+*.xml
+*.csv
+test_*
+*.ser
+*.zip
+*.squid
+*.xls
+
+
+
+
+
+# MACOS
+.DS_Store
