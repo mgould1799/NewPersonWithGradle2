@@ -62,7 +62,7 @@ public class PersonTest {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName));
             Person testPerson = (Person) in.readObject();
             in.close();
-            assert person.equals(testPerson);
+            assertEquals(person.equals(testPerson),true);
         }
         catch(Exception e){
             System.out.println(e);
@@ -78,7 +78,7 @@ public class PersonTest {
         String fileName = "binary.ser";
         Person expResult = new Person("Meagan",55);
         Person result = Person.deserializationBinary(fileName);
-        assert expResult.equals(result);
+        assertEquals(expResult.equals(result),true);
 
     }
 
@@ -121,7 +121,7 @@ public class PersonTest {
             }
         }
 
-        assert test.equals(person);
+        assertEquals(test.equals(person),true);
     }
 
     /**
@@ -133,7 +133,7 @@ public class PersonTest {
         String fileName = "csv.csv";
         Person expResult = new Person("Meagan",55);
         Person result = Person.deserializationCSV(fileName);
-        assert result.equals(expResult);
+        assertEquals(result.equals(expResult),true);
 
     }
 
@@ -157,7 +157,7 @@ public class PersonTest {
         Person testPerson = (Person) decoder.readObject();
         decoder.close();
 
-        assert person.equals(testPerson);
+        assertEquals( person.equals(testPerson),true);
     }
 
     /**
@@ -169,11 +169,11 @@ public class PersonTest {
         String fileName = "xml.xml";
         Person expResult = new Person("Meagan",55);;
         Person result = Person.deserializationXML(fileName);
-        assert result.equals(expResult);
+        assertEquals(result.equals(expResult),true);
 
     }
     
-    @Test
+  /*  @Test
     public void testDeserializationXStream(){
         String fileName="xstream.xml";
         Person expResult= new Person("Meagan",55);
@@ -181,5 +181,6 @@ public class PersonTest {
         Person result= Person.deserializationXStream(fileName);
         assert result.equals(expResult);
     }
+    */
     
 }

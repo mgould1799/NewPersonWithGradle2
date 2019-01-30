@@ -14,7 +14,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import com.thoughtworks.xstream.XStream;
+/*import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -26,7 +26,7 @@ import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;*/
 
 
 
@@ -242,6 +242,16 @@ public class Person implements Serializable{
     }
 
 
+    public boolean equals(Person person){
+        boolean nameEquals= name.equals(person.getName());
+        boolean dobEquals=DOB==person.getDOB();
+        if(nameEquals&&dobEquals)
+            return true;
+        else
+            return false;
+    }
+    /*
+
     public static void serializationXStream(Person person, String file) {
 
         OutputStreamWriter outfile = null;
@@ -270,10 +280,10 @@ public class Person implements Serializable{
 
     }
 
-    /*@Override
+    *//*@Override
     public boolean canCovert(Class clazz){
         return clazz.equals(Person.class);
-    }*/
+    }*//*
 
     @Override
     public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
@@ -334,5 +344,5 @@ public class Person implements Serializable{
     @Override
     public boolean canConvert(Class aClass) {
         return aClass.equals(Person.class);
-    }
+    }*/
 }
