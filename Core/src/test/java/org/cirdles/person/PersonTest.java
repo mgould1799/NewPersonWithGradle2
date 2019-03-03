@@ -173,14 +173,14 @@ public class PersonTest {
 
     }
     
-  /*  @Test
+    @Test
     public void testDeserializationXStream(){
         String fileName="xstream.xml";
         Person expResult= new Person("Meagan",55);
         Person.serializationXStream(expResult, fileName);
         Person result= Person.deserializationXStream(fileName);
-        assert result.equals(expResult);
+        assertEquals(result.equals(expResult),true);
     }
-    */
+    
     
 }

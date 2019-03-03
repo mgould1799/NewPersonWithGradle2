@@ -4,6 +4,13 @@
 package org.cirdles.person;
 
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
@@ -14,24 +21,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-/*import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;*/
 
 
 
 
-public class Person implements Serializable{
+
+public class Person implements Serializable, Converter{
 
     /**
      * attributes
@@ -250,7 +245,6 @@ public class Person implements Serializable{
         else
             return false;
     }
-    /*
 
     public static void serializationXStream(Person person, String file) {
 
@@ -280,10 +274,10 @@ public class Person implements Serializable{
 
     }
 
-    *//*@Override
+    
     public boolean canCovert(Class clazz){
         return clazz.equals(Person.class);
-    }*//*
+    }
 
     @Override
     public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
@@ -341,8 +335,8 @@ public class Person implements Serializable{
     }
 
 
-    @Override
+    
     public boolean canConvert(Class aClass) {
         return aClass.equals(Person.class);
-    }*/
+    }
 }

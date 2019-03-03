@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/1.Core.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/1.Core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/1.Core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/1.Core.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/1.Core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/1.Core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/1.Web.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/1.Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/1.Web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/1.Web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/1.Web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/1.Web.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/NewPersonWithGradle.iml" filepath="$PROJECT_DIR$/NewPersonWithGradle.iml" />
     </modules>
   </component>

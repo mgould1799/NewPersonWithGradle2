@@ -6,6 +6,8 @@
       <module name="1.App.test" target="1.8" />
       <module name="1.Core.main" target="1.8" />
       <module name="1.Core.test" target="1.8" />
+      <module name="1.Web.main" target="1.8" />
+      <module name="1.Web.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
