@@ -5,20 +5,11 @@
  */
 package org.cirdles.person.web;
 
-import java.io.File;
-import java.io.InputStream;
-import javax.annotation.PostConstruct;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DefaultValue;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import org.glassfish.jersey.media.multipart.FormDataParam;
 
-import static com.sun.tools.doclets.formats.html.markup.HtmlStyle.header;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
 /**
  *
@@ -35,8 +26,27 @@ public class ReportingResource {
         reportingService = new ReportingService(); 
     }
 
+
     @POST
-    public Response generate(String text){
+    @Consumes("text/plain")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response generate(
+          //@FormDataParam("source") String text) throws Exception
+          @QueryParam("source") String text) throws Exception
+    {
+        String return_text= reportingService.reverse(text);
+
+        return Response.ok(return_text).build();
+    }
+
+    @GET
+    @Path("test")
+    @Consumes("text/plain")
+    @Produces("text/plain")
+    public Response generate_two(
+            //@FormDataParam("source") String text) throws Exception
+            @QueryParam("source") String text) throws Exception
+    {
         String return_text= reportingService.reverse(text);
 
         return Response.ok(return_text).build();

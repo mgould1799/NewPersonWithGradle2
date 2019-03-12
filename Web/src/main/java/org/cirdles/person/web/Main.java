@@ -9,6 +9,7 @@ package org.cirdles.person.web;
  *
  * @author meagangould
  */
+import org.eclipse.jetty.server.Server;
 import org.glassfish.jersey.jetty.JettyHttpContainerFactory;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -18,7 +19,7 @@ import java.net.URI;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         URI baseUri = UriBuilder.fromUri("http://localhost/")
                 .port(8080)
                 .build();
@@ -26,7 +27,8 @@ public class Main {
         ResourceConfig config = new ResourceConfig(ReportingResource.class);
         config.register(MultiPartFeature.class);
 
-        JettyHttpContainerFactory.createServer(baseUri, config);
+        Server server= JettyHttpContainerFactory.createServer(baseUri, config);
+        server.start();
     }
 
 }

@@ -14,12 +14,18 @@ public class ReportingService {
     public ReportingService(){
     }
 
-    public String reverse(String text){
-        String reverse_string = null;
-        for(int i=text.length(); i>0;i--){
+
+    public static String reverse(String text){
+        String reverse_string="";
+        for(int i=text.length()-1; i>=0;i--){
            reverse_string+=text.charAt(i);
         }
         return reverse_string;
     }
-    
+
+    public static void main(String[] args){
+
+        String x = "purple";
+        System.out.println(reverse(x));
+    }
 }
