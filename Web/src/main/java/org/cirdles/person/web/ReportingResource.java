@@ -5,11 +5,14 @@
  */
 package org.cirdles.person.web;
 
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.media.multipart.FormDataParam;
+
+import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
 /**
  *
@@ -17,7 +20,7 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
  */
 
 
-
+@Path("test")
 public class ReportingResource {
     
     private ReportingService reportingService; 
@@ -29,10 +32,10 @@ public class ReportingResource {
 
     @POST
     @Consumes("text/plain")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(TEXT_PLAIN)
     public Response generate(
           //@FormDataParam("source") String text) throws Exception
-          @QueryParam("source") String text) throws Exception
+          @DefaultValue("XYZ")@QueryParam("source") String text) throws Exception
     {
         String return_text= reportingService.reverse(text);
 
@@ -40,12 +43,11 @@ public class ReportingResource {
     }
 
     @GET
-    @Path("test")
     @Consumes("text/plain")
-    @Produces("text/plain")
+    @Produces(TEXT_PLAIN)
     public Response generate_two(
             //@FormDataParam("source") String text) throws Exception
-            @QueryParam("source") String text) throws Exception
+            @DefaultValue("XYZ")@QueryParam("source") String text) throws Exception
     {
         String return_text= reportingService.reverse(text);
 
