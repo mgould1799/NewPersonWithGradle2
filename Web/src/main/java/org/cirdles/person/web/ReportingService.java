@@ -5,6 +5,12 @@
  */
 package org.cirdles.person.web;
 
+import org.cirdles.person.Person;
+
+import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  *
  * @author meagangould
@@ -23,9 +29,9 @@ public class ReportingService {
         return reverse_string;
     }
 
-    public static void main(String[] args){
-
-        String x = "purple";
-        System.out.println(reverse(x));
+    public Person change_person_age(Person person){
+        Person person_change = new Person(person.getName(),person.getDOB()+1);
+        return person_change;
     }
+
 }
