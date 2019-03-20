@@ -20,6 +20,10 @@ dependencies {
     compile project(":Core")
     compile "org.glassfish.jersey.containers:jersey-container-jetty-http:2.23.1"
     compile "org.glassfish.jersey.media:jersey-media-multipart:2.23.1"
-    
-    
+    compile 'com.github.cliftonlabs:json-simple:3.1.0'
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+
+
 }

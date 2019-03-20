@@ -9,8 +9,15 @@ import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
+import javax.ws.rs.core.GenericEntity;
 
+import org.cirdles.person.Person;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import org.json.simple.JSONObject;
+
+import java.io.InputStream;
+
 
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
 
@@ -20,7 +27,7 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
  */
 
 
-@Path("test")
+@Path("/service")
 public class ReportingResource {
     
     private ReportingService reportingService; 
@@ -33,7 +40,7 @@ public class ReportingResource {
     @POST
     @Consumes("text/plain")
     @Produces(TEXT_PLAIN)
-    public Response generate(
+    public Response generate_reverse_get(
           //@FormDataParam("source") String text) throws Exception
           @DefaultValue("XYZ")@QueryParam("source") String text) throws Exception
     {
@@ -43,9 +50,10 @@ public class ReportingResource {
     }
 
     @GET
+    @Path("/reverse")
     @Consumes("text/plain")
     @Produces(TEXT_PLAIN)
-    public Response generate_two(
+    public Response generate_reverse_post(
             //@FormDataParam("source") String text) throws Exception
             @DefaultValue("XYZ")@QueryParam("source") String text) throws Exception
     {
@@ -53,7 +61,27 @@ public class ReportingResource {
 
         return Response.ok(return_text).build();
     }
-    
+
+    @POST
+    @Path("/person")
+    @Consumes("text/plain")
+    @Produces(MediaType.APPLICATION_JSON)
+    //@Produces(TEXT_PLAIN)
+    public Response add_to_dob(
+            @DefaultValue("Bob") @QueryParam("name") String name,
+            @DefaultValue("22") @QueryParam("DOB") Long DOB) throws Exception
+    {
+        //http://zetcode.com/jersey/json/
+        //https://www.tutorialspoint.com/redis/redis_java.htm
+        Person person = new Person(name, DOB);
+        Person return_person= reportingService.change_person_age(person);
+        JSONObject return_value = new JSONObject();
+        return_value.put("name",return_person.getName());
+        return_value.put("DOB",return_person.getDOB());
+        return Response.ok().entity(return_person).build();
+        //String something = return_person.prettyString();
+        //return Response.ok(something).build();
+    }
     
     
     
@@ -62,60 +90,5 @@ public class ReportingResource {
 
 
 
-//
-//package org.cirdles.squid.web;
-//
-//import java.io.File;
-//import java.io.InputStream;
-//import javax.ws.rs.Consumes;
-//import javax.ws.rs.DefaultValue;
-//import javax.ws.rs.POST;
-//import javax.ws.rs.Path;
-//import javax.ws.rs.Produces;
-//import javax.ws.rs.core.MediaType;
-//import javax.ws.rs.core.Response;
-//import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-//import org.glassfish.jersey.media.multipart.FormDataParam;
-//
-///**
-// * Created by johnzeringue on 7/27/16.
-// * Adapted by James Bowring Dec 2018.
-// */
-//@Path("squidReporting")
-//public class SquidReportingResource {
-//
-//    private SquidReportingService squidReportingService;
-//
-//    public SquidReportingResource() {
-//        squidReportingService = new SquidReportingService();
-//    }
-//
-//    @POST
-//    @Consumes(MediaType.MULTIPART_FORM_DATA)
-//    @Produces("application/zip")
-//    public Response generateReports(
-//            @FormDataParam("prawnFile") InputStream prawnFile,
-//            @FormDataParam("prawnFile") FormDataContentDisposition contentDispositionHeader,
-//            @FormDataParam("taskFile") InputStream taskFile,
-//            @DefaultValue("true") @FormDataParam("useSBM") boolean useSBM,
-//            @DefaultValue("false") @FormDataParam("userLinFits") boolean userLinFits,
-//            @DefaultValue("") @FormDataParam("refMatFilter") String refMatFilter,
-//            @DefaultValue("") @FormDataParam("concRefMatFilter") String concRefMatFilter,
-//            @DefaultValue("PB_204") @FormDataParam("prefIndexIso") String preferredIndexIsotopeName)
-//            throws Exception {
-//
-//        java.nio.file.Path pathToZip = squidReportingService.generateReports(
-//                contentDispositionHeader.getFileName(), 
-//                prawnFile, taskFile, useSBM, userLinFits, refMatFilter, concRefMatFilter,
-//                preferredIndexIsotopeName);
-//        File zippedFile = pathToZip.toFile();        
-//        
-//        return Response
-//                .ok(zippedFile)
-//                .header("Content-Disposition",
-//                        "attachment; filename=squid-reports.zip")
-//                .build();
-//    }
-//
-//}
+
 
