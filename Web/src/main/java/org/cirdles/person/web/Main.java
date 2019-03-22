@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         URI baseUri = UriBuilder.fromUri("http://localhost/")
-                .port(8080)
+                .port(8081)
                 .build();
 
         ResourceConfig config = new ResourceConfig(ReportingResource.class);

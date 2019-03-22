@@ -65,8 +65,8 @@ public class ReportingResource {
     @POST
     @Path("/person")
     @Consumes("text/plain")
-    @Produces(MediaType.APPLICATION_JSON)
-    //@Produces(TEXT_PLAIN)
+    //@Produces(MediaType.APPLICATION_JSON)
+    @Produces("text/plain")
     public Response add_to_dob(
             @DefaultValue("Bob") @QueryParam("name") String name,
             @DefaultValue("22") @QueryParam("DOB") Long DOB) throws Exception
@@ -75,12 +75,16 @@ public class ReportingResource {
         //https://www.tutorialspoint.com/redis/redis_java.htm
         Person person = new Person(name, DOB);
         Person return_person= reportingService.change_person_age(person);
-        JSONObject return_value = new JSONObject();
+        /*JSONObject return_value = new JSONObject();
         return_value.put("name",return_person.getName());
         return_value.put("DOB",return_person.getDOB());
-        return Response.ok().entity(return_person).build();
-        //String something = return_person.prettyString();
-        //return Response.ok(something).build();
+        String jsonPersonString = return_value.toJSONString();
+        return Response
+                .ok(jsonPersonString)
+                .build();
+          */
+        String something = return_person.prettyString();
+        return Response.ok(something).build();
     }
     
     
