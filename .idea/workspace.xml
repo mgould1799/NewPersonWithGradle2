@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a667c3c-15e9-491a-bf2a-eac0f1b43b22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/App/1.App.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/App/1.App.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Core/1.Core.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Core/1.Core.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Core/1.Core.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Core/1.Core.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/out/production/classes/org/cirdles/person/web/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Web/out/production/classes/org/cirdles/person/web/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java" afterDir="false" />
     </list>
@@ -54,7 +47,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -71,11 +64,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+            <state relative-caret-position="447">
+              <caret line="77" column="8" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#805#806#0" expanded="true" />
@@ -88,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="272">
               <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
             </state>
           </provider>
@@ -109,14 +102,14 @@
       <list>
         <option value="$PROJECT_DIR$/Core/src/test/java/org/cirdles/person/PersonTest.java" />
         <option value="$PROJECT_DIR$/Core/src/main/java/org/cirdles/person/Person.java" />
-        <option value="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java" />
         <option value="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingService.java" />
         <option value="$PROJECT_DIR$/Web/build.gradle" />
         <option value="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java" />
+        <option value="$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1600" />
     <option name="height" value="877" />
@@ -127,6 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,7 +167,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -656,6 +649,7 @@
       <workItem from="1552672404450" duration="11000" />
       <workItem from="1553090375518" duration="3964000" />
       <workItem from="1553295282746" duration="658000" />
+      <workItem from="1553296891921" duration="583000" />
     </task>
     <servers />
   </component>
@@ -689,13 +683,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20540000" />
+    <option name="totallyTimeSpent" value="21123000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31258023" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39822295" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -704,7 +698,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37810218" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -835,12 +829,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java">
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="272">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="77" column="8" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,21 +851,12 @@
     <entry file="file://$PROJECT_DIR$/Web/out/production/classes/org/cirdles/person/web/ReportingResource.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingService.java">
+    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/src/main/java/org/cirdles/person/web/ReportingResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        <state relative-caret-position="221">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
           </folding>
         </state>
       </provider>
