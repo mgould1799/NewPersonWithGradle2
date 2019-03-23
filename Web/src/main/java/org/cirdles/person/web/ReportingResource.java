@@ -27,7 +27,7 @@ import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
  */
 
 
-@Path("/service")
+@Path("service")
 public class ReportingResource {
     
     private ReportingService reportingService; 
@@ -64,28 +64,24 @@ public class ReportingResource {
 
     @POST
     @Path("/person")
-    @Consumes("text/plain")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    //@Produces("text/plain")
     public Response add_to_dob(
-            @DefaultValue("Bob") @QueryParam("name") String name,
-            @DefaultValue("22") @QueryParam("DOB") Long DOB) throws Exception
+            @DefaultValue("Bob") @FormDataParam("name") String name,
+            @DefaultValue("22") @FormDataParam("DOB") String DOB)
+            throws Exception
     {
         //http://zetcode.com/jersey/json/
         //https://www.tutorialspoint.com/redis/redis_java.htm
-        Person person = new Person(name, DOB);
+        Person person = new Person(name, Long.parseLong(DOB));
         Person return_person= reportingService.change_person_age(person);
         JSONObject return_value = new JSONObject();
-        return_value.put("name",return_person.getName());
         return_value.put("DOB",return_person.getDOB());
+        return_value.put("name",return_person.getName());
         String jsonPersonString = return_value.toJSONString();
         return Response
                 .ok(jsonPersonString)
                 .build();
-
-        /*String something = return_person.prettyString();
-        return Response.ok(something).build();
-        */
     }
     
     
