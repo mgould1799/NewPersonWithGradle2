@@ -9,10 +9,12 @@ import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.File;
 import java.util.List;
 import javax.ws.rs.core.GenericEntity;
 
 import org.cirdles.person.Person;
+import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.json.simple.JSONObject;
 
@@ -62,6 +64,11 @@ public class ReportingResource {
         return Response.ok(return_text).build();
     }
 
+    /**
+     *
+     */
+
+
     @POST
     @Path("/person")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
@@ -83,7 +90,17 @@ public class ReportingResource {
                 .ok(jsonPersonString)
                 .build();
     }
-    
+
+    @POST
+    @Path("/personFile")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.MULTIPART_FORM_DATA)
+    public Response changeDOBFile(
+            @FormDataParam("file") InputStream input){
+        java.nio.file.Path pathToPerson = reportingService.generatePerson(input);
+        File returnFile = pathToPerson.toFile();
+        return Response.ok(returnFile).build();
+    }
     
     
 }

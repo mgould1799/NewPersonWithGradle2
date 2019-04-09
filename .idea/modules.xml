@@ -12,6 +12,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/1.Web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/1.Web.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/1.Web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/1.Web.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/NewPersonWithGradle.iml" filepath="$PROJECT_DIR$/NewPersonWithGradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.iml" filepath="$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.main.iml" filepath="$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.test.iml" filepath="$PROJECT_DIR$/.idea/modules/App/NewPersonWithGradle.App.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Core/NewPersonWithGradle.Core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/NewPersonWithGradle.Web.test.iml" />
     </modules>
   </component>
 </project>

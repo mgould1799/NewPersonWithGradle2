@@ -8,6 +8,12 @@
       <module name="1.Core.test" target="1.8" />
       <module name="1.Web.main" target="1.8" />
       <module name="1.Web.test" target="1.8" />
+      <module name="NewPersonWithGradle.App.main" target="1.8" />
+      <module name="NewPersonWithGradle.App.test" target="1.8" />
+      <module name="NewPersonWithGradle.Core.main" target="1.8" />
+      <module name="NewPersonWithGradle.Core.test" target="1.8" />
+      <module name="NewPersonWithGradle.Web.main" target="1.8" />
+      <module name="NewPersonWithGradle.Web.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
